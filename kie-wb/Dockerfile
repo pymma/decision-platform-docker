@@ -26,7 +26,7 @@ ENV JAVA_OPTS -Xms256m -Xmx4512m
 ####### DROOLS-WB ############
 
 #ADD maven/kie-wb.war  /opt/jboss/wildfly/standalone/deployments/$KIE_CONTEXT_PATH.war
-RUN curl -o /opt/jboss/wildfly/standalone/deployments/$KIE_CONTEXT_PATH.war https://jenkins.pymma-software.net/view/pymma/job/Pymma-kie-platform-deploy/lastSuccessfulBuild/artifact/drools-framework-base-tools-parent/drools-framework-kie-wb-parent/kie-wb/target/kie-wb.war /opt/jboss/wildfly/standalone/deployments/kie-wb.war
+RUN curl -o /opt/jboss/wildfly/standalone/deployments/$KIE_CONTEXT_PATH.war https://jenkins.pymma-software.net/view/pymma/job/Pymma-kie-platform-deploy/lastSuccessfulBuild/artifact/drools-framework-base-tools-parent/drools-framework-kie-wb-parent/kie-wb/target/kie-wb.war 
 
 
 #RUN curl -o $HOME/$KIE_CONTEXT_PATH.war $KIE_REPOSITORY/org/kie/kie-drools-wb-distribution-wars/$KIE_VERSION/kie-drools-wb-distribution-wars-$KIE_VERSION-$KIE_CLASSIFIER.war && \
