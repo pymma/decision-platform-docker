@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+ <localRepository>/m2_kiewb/repository</localRepository>
+
+    <servers>
+
+        <server>
+            <id>pymma-release</id>
+            <username>pymma-dev</username>
+            <password>VlcBe38jE9eNIu5H</password>
+        </server>
+        <server>
+            <id>pymma-snapshot</id>
+            <username>pymma-dev</username>
+            <password>VlcBe38jE9eNIu5H</password>
+        </server>
+
+
+
+    </servers>
+
+
+    <mirrors>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>pymma-declasin</id>
+            <repositories>
+                 <repository>
+                    <id>pymma-release</id>
+                    <name>pymma repo release</name>
+                    <url>https://nexus.pymma-software.com/nexus/content/repositories/pymma-release/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                        <checksumPolicy>ignore</checksumPolicy>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>pymma-snapshot</id>
+                    <name>pymma repo release</name>
+                    <url>https://nexus.pymma-software.com/nexus/content/repositories/pymma-snapshot/</url>
+                         <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                        <checksumPolicy>ignore</checksumPolicy>
+                    </snapshots>
+                    </repository>
+
+            </repositories>
+
+
+        </profile>
+
+   
+              
+    </profiles>
+    <activeProfiles>
+
+
+        <activeProfile>pymma-declasin</activeProfile>
+    </activeProfiles>
+
+</settings>

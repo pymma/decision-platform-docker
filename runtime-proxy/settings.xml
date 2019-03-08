@@ -1,0 +1,63 @@
+<settings>
+           
+    <localRepository>/m2_kieserver/repository</localRepository>
+    <servers>
+        <server>
+            <id>guvnor-m2-repo</id>
+            <username>admin</username>
+            <password>admin</password>
+                  <configuration>
+                <wagonProvider>httpclient</wagonProvider>
+                <httpConfiguration>
+                    <all>
+                        <usePreemptive>true</usePreemptive>
+                    </all>
+                </httpConfiguration>
+            </configuration>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>kie</id>
+            <repositories>
+                <repository>
+                    <id>guvnor-m2-repo</id>
+                    <name>Guvnor M2 Repo</name>
+                    <url>http://kie-wb:8080/kie-wb/maven2/</url>
+                    <activation>
+                        <activeByDefault>true</activeByDefault>
+                    </activation>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>guvnor-m2-repo</id>
+                    <name>Guvnor M2 Repo</name>
+                    <url>http://kie-wb:8080/kie-wb/maven2/</url>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>kie</activeProfile>
+    </activeProfiles>
+</settings>
